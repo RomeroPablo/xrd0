@@ -1,0 +1,34 @@
+cabal-version:      3.0
+name:               xrd
+version:            0.1.0.0
+-- synopsis:
+-- description:
+license:            MIT
+license-file:       LICENSE
+author:             Pablo Romero
+maintainer:         romeropablojr03@gmail.com
+-- copyright:
+category:           Graphics
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+common warnings
+    ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+
+executable xrd
+    import:           warnings
+    main-is:          Main.hs
+    -- other-modules:
+    -- other-extensions:
+    build-depends:    base ^>=4.18.3.0,
+                      GLFW-b >= 3.3.0.0,
+                      vulkan >= 3.0,
+                      vulkan-utils >= 0.5,
+                      vector,
+                      bytestring,
+                      text,
+                      transformers,
+                      resourcet
+    hs-source-dirs:   app
+    default-language: Haskell2010
